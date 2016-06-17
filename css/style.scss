@@ -1,9 +1,11 @@
 $lightcolor: #ffb997; //Light Orange
 $neutralcolor: #f37d7d; //Pink
 $darkcolor: #843b62; //Purple
-$dark: #0b032d; //Dark Purple
+$dark: #13102b; //Dark Purple
 $neutral: #907d90; //Grey
 $light: #fff2fa; //White
+
+$seethrough: rgba(255,255,255,.5);
 
 // b class = background
 // c class = clear/container
@@ -13,7 +15,8 @@ $light: #fff2fa; //White
 // onlys class = only show on small screens
 // onlyl class = only show on large screens
 
-
+.container {overflow-x: hidden;}
+html {background: rgba(255,185,151, .3) url(../images/background.png)}
 
 .left {float: left;}
 .right {float: right;}
@@ -23,8 +26,9 @@ h1 {color: $light;}
 .d {padding-left: 1rem; color: $neutral}
 .h {vertical-align: center;}
 
-.l {padding-bottom:2rem;}
-.b {padding: 1rem;}
+.p {margin-bottom: 5rem;}
+.l {padding-bottom: 2rem;}
+.b {padding: 1rem; background-color: $seethrough; border-radius: 3px;}
 .m {margin-bottom: 5px;}
 
 
@@ -32,15 +36,15 @@ h1 {color: $light;}
 
 a {text-decoration: none; color: $dark; &:hover {color: $neutral;}}
 
-.h {background-color: $dark; border-radius:3px; color: $light; padding: 1rem;}
+.h {background-color: $seethrough; border-radius:3px; color: $dark; padding: 1rem;}
 
-hr {margin-top: 10px; margin-bottom: 10px;}
+hr {margin-top: 10px; margin-bottom: 10px; border: solid 1px $seethrough;}
 
 h3, h4 {margin-bottom: 10px;}
 
 @media (min-width: 720px) {
 	.onlys {display: none;}
-	#logo {}
+	.titles {text-align: left;}
 }
 
 .center {text-align: center;}
@@ -48,6 +52,7 @@ h3, h4 {margin-bottom: 10px;}
 @media (max-width: 719px) {
 	.onlys {display: block;}
 	.onlyl {display: none;}
+	.titles {text-align: center;}
 }
 
 .lato {font-family: 'Lato', sans-serif;}
