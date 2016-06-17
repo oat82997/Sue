@@ -1,0 +1,59 @@
+$lightcolor: #ffb997; //Light Orange
+$neutralcolor: #f37d7d; //Pink
+$darkcolor: #843b62; //Purple
+$dark: #0b032d; //Dark Purple
+$neutral: #907d90; //Grey
+$light: #fff2fa; //White
+
+// b class = background
+// c class = clear/container
+// d class = description
+// h class = hours
+// l class = last in group
+// onlys class = only show on small screens
+// onlyl class = only show on large screens
+
+
+
+.left {float: left;}
+.right {float: right;}
+.c {clear: both;}
+h3, h4, .h {color: $dark;}
+h1 {color: $light;}
+.d {padding-left: 1rem; color: $neutral}
+.h {vertical-align: center;}
+
+.l {padding-bottom:2rem;}
+.b {padding: 1rem;}
+.m {margin-bottom: 5px;}
+
+
+.connect {margin-bottom: 0px;}
+
+a {text-decoration: none; color: $dark; &:hover {color: $neutral;}}
+
+.h {background-color: $dark; border-radius:3px; color: $light; padding: 1rem;}
+
+hr {margin-top: 10px; margin-bottom: 10px;}
+
+h3, h4 {margin-bottom: 10px;}
+
+@media (min-width: 720px) {
+	.onlys {display: none;}
+	#logo {}
+}
+
+.center {text-align: center;}
+
+@media (max-width: 719px) {
+	.onlys {display: block;}
+	.onlyl {display: none;}
+}
+
+.lato {font-family: 'Lato', sans-serif;}
+p {font-family: 'Lato', sans-serif;}
+.t {font-family: 'Quicksand', sans-serif;}
+
+#header {margin-top: 1.5em;}
+#logo {width: 150px; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 1.5em;}
+#logotype {max-width: 100%; height: auto;}
